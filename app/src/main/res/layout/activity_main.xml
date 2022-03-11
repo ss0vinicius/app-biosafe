@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B5E20"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DCEDC8"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:text="BioSafe"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textAlignment="center">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStandBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="STAND-BY"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/edTxStandBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvEmCiclo"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="EM CICLO"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/edTxOnCicleStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFimDeCiclo"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="FIM DE CICLO"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/edTxStopStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPortaAberta"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="PORTA ABERTA"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/edTxDoorStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Relé Aquecimento"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/edTxRelayHeatStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Relé Lâmpada"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/edTxRelayLampStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tvEscolhaTipoCiclo"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingTop="6dp"
+            android:text="Escolha o tipo de ciclo"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center">
+
+            <FrameLayout
+                android:layout_width="205dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btCicloNormal"
+                    android:layout_width="100dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="cicloNormal"
+                    android:text="NORMAL" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="205dp"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btCicloRapido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="cicloRapido"
+                    android:text="RÁPIDO" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edTxPainel"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="PAINEL"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp">
+
+            <EditText
+                android:id="@+id/edTxProgresso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Progresso" />
+        </FrameLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/edTxTimeRemaing"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:ems="10"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="s" />
+
+            <EditText
+                android:id="@+id/edTxTemperature"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="ºC" />
+        </TableRow>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:id="@+id/btCicloAbortar"
+                android:layout_width="200dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:onClick="cicloAbortar"
+                android:text="ABORTAR CICLO" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
